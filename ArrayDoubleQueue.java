@@ -64,8 +64,15 @@ public class ArrayDoubleQueue implements IDoubleQueue
     @Override
     public Double dequeue()
     {
+        double temp = 0;
+        temp = queue[0] ;
 
-        return (double) 0;
+        for (int i = 1; i < index; i++)  {
+
+            queue[i-1] = queue[i];
+        }
+
+        return temp;
     }
 
     @Override
@@ -81,7 +88,7 @@ public class ArrayDoubleQueue implements IDoubleQueue
 
         for (int i = 0; i < index; i++) {
 
-            result += "[" + queue[i] + "] ";
+            result += ("[" + queue[i] + "] ");
             //System.out.println(queue[i]);
 
         }
