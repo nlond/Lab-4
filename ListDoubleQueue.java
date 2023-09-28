@@ -16,13 +16,13 @@ public class ListDoubleQueue implements IDoubleQueue
     private int maxListSize;
 
     /**ListDoubleQueueConstructorContact
-     *
+     * Constructor for the double queue with arrayList backend
      *
      * @param maxSize
      *
-     * @pre
+     * @pre maxSize > 0 
      *
-     * @post
+     * @post self = new ArrayList<Double>() AND maxListSize = maxSize
      *
      */
     public ListDoubleQueue(int maxSize)
@@ -36,7 +36,7 @@ public class ListDoubleQueue implements IDoubleQueue
      *
      * @param val
      *
-     * @pre
+     * @pre none 
      *
      * @post
      *
