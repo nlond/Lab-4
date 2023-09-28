@@ -64,6 +64,7 @@ public class ArrayDoubleQueue implements IDoubleQueue
     @Override
     public Double dequeue()
     {
+
         return (double) 0;
     }
 
@@ -76,7 +77,15 @@ public class ArrayDoubleQueue implements IDoubleQueue
 
     public String toString()
     {
-        return "";
+        String result = "";
+
+        for (int i = 0; i < index; i++) {
+
+            result += queue[i] + " ";
+            //System.out.println(queue[i]);
+
+        }
+        return result;
     }
 
     //-----------------Ignore the functions below this line-----------------------
