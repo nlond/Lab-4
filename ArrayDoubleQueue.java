@@ -21,6 +21,7 @@ public class ArrayDoubleQueue implements IDoubleQueue
 {
     private Double[] queue;
     private int queueMaxSize;
+    private int index = 0;
 
     /**ArrayDoubleQueueConstructorContact
      * Constructor for the arrayListDouble queue.
@@ -53,23 +54,9 @@ public class ArrayDoubleQueue implements IDoubleQueue
     @Override
     public void enqueue(Double val)
     {
+        queue[index] = val;
+        index++;
 
-
-        /*
-        for (int i = 0; i < queueMaxSize; i++) {
-
-            System.out.println(queue[i]);
-
-            if (queue[i] == null) {
-                queue[i] = val;
-                break;
-            }
-
-        }
-
-        System.out.println();
-
-         */
     }
 
     //Note: The below 3 functions intentionally do not have contracts. You do not need to add them.
@@ -84,7 +71,7 @@ public class ArrayDoubleQueue implements IDoubleQueue
     public int length()
     {
 
-        return 0;
+        return index;
     }
 
     public String toString()
