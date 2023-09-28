@@ -6,12 +6,12 @@ package com.gradescope.DoubleQueue.code;
    Doubles are initialized to 0
  *
  *@initialization Ensures:
- *    Queue contains only 0s and is maxSize or smaller
+ *    Queue contains no NULLs and is maxSize or smaller
  *@defines:
  *    length: Z
       
  *@constraints:
- *    0 < length <= maxSize
+ *    0 < length < maxSize
  */
 public interface IDoubleQueue
 {
