@@ -1,3 +1,12 @@
+/*
+Team Member Names:
+James Moore
+Owen Merwarth
+Michaeux
+Nathan Londhe
+*/
+
+
 package com.gradescope.DoubleQueue.code;
 
 /**ArrayDoubleQueueContract
