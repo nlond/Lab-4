@@ -41,9 +41,9 @@ public interface IDoubleQueue
     public int length();
 
     /**toStringContract
+     * converts the doubles in a queue to a string and returns that string
      *
-     *
-     *@return returns a string that will list out all of the doubles in a string format.
+     *@return a string that will list out all of the doubles in a string format.
      *
      *@pre none
      *
