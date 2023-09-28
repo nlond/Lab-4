@@ -29,7 +29,7 @@ public interface IDoubleQueue
     public Double dequeue();
 
     /**lengthContract
-     *
+     * Returns an int equal to the queue's length
      *
      *@return integer representing the length of the queue
      *
@@ -43,11 +43,11 @@ public interface IDoubleQueue
     /**toStringContract
      *
      *
-     *@return
+     *@return returns a string that will list out all of the doubles in a string format.
      *
-     *@pre
+     *@pre none
      *
-     *@post
+     *@post self = #self
      *
      */
     public String toString();
