@@ -32,13 +32,17 @@ public class ListDoubleQueue implements IDoubleQueue
     }
 
     /**enqueueContact
-     *
+     * Enqueue adds an item to the queue
      *
      * @param val
      *
      * @pre none 
      *
-     * @post
+     * @post [adds val to the end of the list IFF LQueue.size < maxSize]
+     
+     [overwrites the last double of the list with val IFF LQueue.size = maxSize]
+     
+      AND maxListSize = #maxListSize
      *
      */
     @Override
