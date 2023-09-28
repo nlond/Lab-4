@@ -3,11 +3,11 @@ package com.gradescope.DoubleQueue.code;
 import java.util.ArrayList;
 
 /**ListDoubleQueueContract
+ * List implementation for the double queue
  *
+ * @invariant: maxListSize > 0
  *
- * @invariant:
- *
- * @corresponds:
+ * @corresponds: maxSize = maxListSize
  *
  */
 public class ListDoubleQueue implements IDoubleQueue
@@ -20,7 +20,7 @@ public class ListDoubleQueue implements IDoubleQueue
      *
      * @param maxSize
      *
-     * @pre maxSize > 0 
+     * @pre none
      *
      * @post self = new ArrayList<Double>() AND maxListSize = maxSize
      *
