@@ -33,9 +33,9 @@ public interface IDoubleQueue
      *
      *@return integer representing the length of the queue
      *
-     *@pre none 
+     *@pre queueMinSize > 0
      *
-     *@post self = #self
+     *@post self = #self 
      *
      */
     public int length();
