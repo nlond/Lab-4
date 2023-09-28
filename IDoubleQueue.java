@@ -1,14 +1,17 @@
 package com.gradescope.DoubleQueue.code;
 
 /**IDoubleQueueContract
- *
+ * IDoubleQueue represents a queue of doubles
+   Indexing starts at 0
+   Doubles are initialized to 0
  *
  *@initialization Ensures:
- *
+ *    Queue contains only 0s and is maxSize or smaller
  *@defines:
- *
+ *    length: Z
+      
  *@constraints:
- *
+ *    0 < length <= maxSize
  */
 public interface IDoubleQueue
 {
