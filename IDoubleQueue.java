@@ -17,13 +17,13 @@ public interface IDoubleQueue
     public void enqueue(Double val);
 
     /**dequeueContract
+     *Removes the first double in the queue and returns it
      *
+     *@return the first double in the queue that was removed
      *
-     *@return
+     *@pre none 
      *
-     *@pre
-     *
-     *@post
+     *@post [self = #self, excpet the first double in the queue is removed] 
      *
      */
     public Double dequeue();
@@ -31,11 +31,11 @@ public interface IDoubleQueue
     /**lengthContract
      *
      *
-     *@return
+     *@return integer representing the length of the queue
      *
-     *@pre
+     *@pre none 
      *
-     *@post
+     *@post self = #self
      *
      */
     public int length();
