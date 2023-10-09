@@ -23,6 +23,7 @@ public class ArrayDoubleQueue implements IDoubleQueue
     private int queueMaxSize;
     private int index = 0;
 
+
     /**ArrayDoubleQueueConstructorContact
      * Constructor for the arrayListDouble queue.
      *
@@ -85,7 +86,8 @@ public class ArrayDoubleQueue implements IDoubleQueue
     {
         String result = "";
 
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < queueMaxSize; i++) {
+        //for (int i = 0; i < index; i++) {
 
             result += ("[" + queue[i] + "] ");
             //System.out.println(queue[i]);
