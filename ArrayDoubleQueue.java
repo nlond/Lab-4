@@ -87,10 +87,8 @@ public class ArrayDoubleQueue implements IDoubleQueue
         String result = "";
 
         for (int i = 0; i < queueMaxSize; i++) {
-        //for (int i = 0; i < index; i++) {
 
             result += ("[" + queue[i] + "] ");
-            //System.out.println(queue[i]);
 
         }
         return result;
