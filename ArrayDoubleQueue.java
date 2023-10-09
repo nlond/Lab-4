@@ -2,7 +2,7 @@
 Team Member Names:
 James Moore
 Owen Merwarth
-Michaeux
+Micheaux Simmons
 Nathan Londhe
 */
 
