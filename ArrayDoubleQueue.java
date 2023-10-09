@@ -77,7 +77,6 @@ public class ArrayDoubleQueue implements IDoubleQueue
     @Override
     public int length()
     {
-
         return index;
     }
 
@@ -85,9 +84,9 @@ public class ArrayDoubleQueue implements IDoubleQueue
     {
         String result = "";
 
-        for (int i = 0; i < index; i++) {
+        for (double d : queue) {
 
-            result += ("[" + queue[i] + "] ");
+            result += ("[" + d + "] ");
             //System.out.println(queue[i]);
 
         }
