@@ -64,16 +64,21 @@ public class ArrayDoubleQueue implements IDoubleQueue
     @Override
     public Double dequeue()
     {
-        double temp = 0;
-        temp = queue[0] ;
+        if (index == 0) {
+            return null;
+        }
+
+        double removedElement = queue[0];
 
         for (int i = 1; i < index; i++)  {
 
             queue[i-1] = queue[i];
         }
+        queue[index - 1] = null;
 
         index--;
-        return temp;
+
+        return removedElement;
     }
 
     @Override
