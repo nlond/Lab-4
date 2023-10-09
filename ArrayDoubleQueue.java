@@ -71,13 +71,13 @@ public class ArrayDoubleQueue implements IDoubleQueue
             queue[i-1] = queue[i];
         }
 
+        index--;
         return temp;
     }
 
     @Override
     public int length()
     {
-
         return index;
     }
 
