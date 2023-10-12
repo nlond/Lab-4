@@ -1,11 +1,11 @@
 
 
 default: com/Gradescope/DoubleQueue/code/IDoubleQueue.java com/Gradescope/DoubleQueue/code/ListDoubleQueue.java com/Gradescope/DoubleQueue/code/ArrayDoubleQueue.java
-  javac IDoubleQueue.java ListDoubleQueue.java ArrayDoubleQueue.java
+	javac com/Gradescope/DoubleQueue/code/IDoubleQueue.class com/Gradescope/DoubleQueue/code/ListDoubleQueue.class com/Gradescope/DoubleQueue/code/ArrayDoubleQueue.class
 
-run: com/Gradescope/DoubleQueue/code/DoubleDriverQueue.class
-  java DoubleDriverQueue
+run: DoubleDriverQueue.class
+	java DoubleDriverQueue.class
 
 clean:
-  rm –f *.class
+	rm –f *.class
 
