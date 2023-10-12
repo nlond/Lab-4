@@ -10,9 +10,9 @@ import java.util.ArrayList;
  * @corresponds: max_queue_size = maxListSize
  *
  */
-public class ListDoubleQueue implements IDoubleQueue<Double>
+public class ListDoubleQueue<T> implements IDoubleQueue<T>
 {
-    private ArrayList<Double> LQueue;
+    private ArrayList<T> LQueue;
     private int maxListSize;
 
     /**ListDoubleQueueConstructorContact
@@ -27,7 +27,7 @@ public class ListDoubleQueue implements IDoubleQueue<Double>
      */
     public ListDoubleQueue(int maxSize)
     {
-        this.LQueue = new ArrayList<Double>();
+        this.LQueue = new ArrayList<T>();
         this.maxListSize = maxSize;
     }
 
@@ -46,7 +46,7 @@ public class ListDoubleQueue implements IDoubleQueue<Double>
      *
      */
     @Override
-    public void enqueue(Double val)
+    public void enqueue(T val)
     {
         if(LQueue.size() == this.maxListSize)
             LQueue.set(this.maxListSize-1, val);
@@ -57,7 +57,7 @@ public class ListDoubleQueue implements IDoubleQueue<Double>
     //Note: The below 3 functions intentionally do not have contracts. You do not need to add them.
 
     @Override
-    public Double dequeue()
+    public T dequeue()
     {
         return LQueue.remove(0);
     }
@@ -73,7 +73,7 @@ public class ListDoubleQueue implements IDoubleQueue<Double>
     public String toString()
     {
         String ret = "";
-        for(Double d : LQueue)
+        for(T d : LQueue)
         {
             ret += ("[" + d + "] ");
         }

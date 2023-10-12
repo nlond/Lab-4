@@ -54,4 +54,24 @@ public interface IDoubleQueue<T>
      *
      */
     public String toString();
+
+    /**
+     *
+     *
+     *
+     */
+
+    public default T peek() {
+
+        T front = dequeue();
+
+        enqueue(front);
+
+        for (int i = 0; i < length()-1; i++) {
+
+            enqueue(dequeue());
+        }
+
+        return front;
+    }
 }

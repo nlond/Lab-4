@@ -17,9 +17,9 @@ package com.gradescope.DoubleQueue.code;
  * @corresponds: max_queue_size = queueMaxSize
  *
  */
-public class ArrayDoubleQueue implements IDoubleQueue<Double>
+public class ArrayDoubleQueue<T> implements IDoubleQueue<T>
 {
-    private Double[] queue;
+    private T[] queue;
     private int queueMaxSize;
     private int index = 0;
 
@@ -38,7 +38,7 @@ public class ArrayDoubleQueue implements IDoubleQueue<Double>
     {
         this.queueMaxSize = maxSize;
 
-        this.queue = new Double[queueMaxSize];
+        this.queue = (T[]) new Object[queueMaxSize];
 
     }
 
@@ -53,7 +53,7 @@ public class ArrayDoubleQueue implements IDoubleQueue<Double>
      *
      */
     @Override
-    public void enqueue(Double val)
+    public void enqueue(T val)
     {
         queue[index] = val;
         index++;
@@ -62,13 +62,13 @@ public class ArrayDoubleQueue implements IDoubleQueue<Double>
     //Note: The below 3 functions intentionally do not have contracts. You do not need to add them.
 
     @Override
-    public Double dequeue()
+    public T dequeue()
     {
         if (index == 0) {
             return null;
         }
 
-        double removedElement = queue[0];
+        T removedElement = queue[0];
 
         for (int i = 1; i < index; i++)  {
 
@@ -105,7 +105,7 @@ public class ArrayDoubleQueue implements IDoubleQueue<Double>
         return this.queueMaxSize;
     }
 
-    public Double[] getQueue()
+    public T[] getQueue()
     {
         return this.queue;
     }
