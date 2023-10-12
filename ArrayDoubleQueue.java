@@ -31,7 +31,7 @@ public class ArrayDoubleQueue<T> implements IDoubleQueue<T>
      *
      * @pre maxSize > 0
      *
-     * @post queueMaxSize = maxSize AND self = new (T[]) new Object[queueMaxSize].
+     * @post queueMaxSize = maxSize AND self = (T[]) new Object[queueMaxSize].
      *
      */
     public ArrayDoubleQueue(int maxSize)
