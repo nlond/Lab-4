@@ -3,7 +3,7 @@ package com.gradescope.DoubleQueue.code;
 import java.util.ArrayList;
 
 /**ListDoubleQueueContract
- * List implementation for the double queue
+ * List implementation for the queue with values of type T
  *
  * @invariant: maxListSize > 0
  *
@@ -16,7 +16,7 @@ public class ListDoubleQueue<T> implements IDoubleQueue<T>
     private int maxListSize;
 
     /**ListDoubleQueueConstructorContact
-     * Constructor for the double queue with arrayList backend
+     * Constructor for the queue with values of type T and arrayList backend
      *
      * @param maxSize
      *
@@ -38,9 +38,9 @@ public class ListDoubleQueue<T> implements IDoubleQueue<T>
      *
      * @pre none 
      *
-     * @post [adds val to the end of the list IFF LQueue.size < maxSize]
+     * @post [adds val of type T to the end of the list IFF LQueue.size < maxSize]
      
-     [overwrites the last double of the list with val IFF LQueue.size = maxSize]
+     [overwrites the last value of type T of the list with val IFF LQueue.size = maxSize]
      
       AND maxListSize = #maxListSize
      *

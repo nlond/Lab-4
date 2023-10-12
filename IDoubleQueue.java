@@ -1,9 +1,9 @@
 package com.gradescope.DoubleQueue.code;
 
 /**IDoubleQueueContract
- * IDoubleQueue represents a queue of doubles
+ * IDoubleQueue represents a queue of type T
    Indexing starts at 0
-   Doubles are initialized to 0
+   the values in the queue are initialized to 0
  *
  *@initialization Ensures:
  *    Queue contains only 0s and is maxSize or smaller
@@ -20,13 +20,13 @@ public interface IDoubleQueue<T>
     public void enqueue(T val);
 
     /**dequeueContract
-     *Removes the first double in the queue and returns it
+     *Removes the first value of type T in the queue and returns it
      *
-     *@return the first double in the queue that was removed
+     *@return the first value of type T in the queue that was removed
      *
      *@pre none 
      *
-     *@post [self = #self, excpet the first double in the queue is removed] 
+     *@post [self = #self, except the first T in the queue is removed]
      *
      */
     public T dequeue();
@@ -44,9 +44,9 @@ public interface IDoubleQueue<T>
     public int length();
 
     /**toStringContract
-     * converts the doubles in a queue to a string and returns that string
+     * converts the values of type T in a queue to a string and returns that string
      *
-     *@return a string that will list out all of the doubles in a string format.
+     *@return a string that will list out all of the values of type T in a string format.
      *
      *@pre none
      *
@@ -55,10 +55,14 @@ public interface IDoubleQueue<T>
      */
     public String toString();
 
-    /**
+    /** peekContract
+     * this function returns the first value of type T in the queue without dequeueing the value
      *
+     * @return the first value of type T in the queue
      *
+     * @pre none
      *
+     * @post self = #self
      */
 
     public default T peek() {
