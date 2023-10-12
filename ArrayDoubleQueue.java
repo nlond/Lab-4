@@ -17,7 +17,7 @@ package com.gradescope.DoubleQueue.code;
  * @corresponds: max_queue_size = queueMaxSize
  *
  */
-public class ArrayDoubleQueue implements IDoubleQueue
+public class ArrayDoubleQueue implements IDoubleQueue<Double>
 {
     private Double[] queue;
     private int queueMaxSize;
