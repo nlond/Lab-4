@@ -13,11 +13,11 @@ package com.gradescope.DoubleQueue.code;
  *@constraints:
  *    0 < length <= maxSize
  */
-public interface IDoubleQueue
+public interface IDoubleQueue<T>
 {
 
     //This function's contracts are in the individual classes
-    public void enqueue(Double val);
+    public void enqueue(T val);
 
     /**dequeueContract
      *Removes the first double in the queue and returns it
@@ -29,7 +29,7 @@ public interface IDoubleQueue
      *@post [self = #self, excpet the first double in the queue is removed] 
      *
      */
-    public Double dequeue();
+    public T dequeue();
 
     /**lengthContract
      * Returns an int equal to the queue's length
